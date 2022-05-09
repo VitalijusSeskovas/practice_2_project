@@ -287,7 +287,7 @@ footer .next__btn:hover {
     background: #83bfff;
 }
 
-/* Last resul box styling */
+/* Resul box styling */
 .result__box {
     background: #ffedc6; 
     width: 450px;
@@ -302,10 +302,3 @@ footer .next__btn:hover {
     pointer-events: none;
     transform: translate(-50%, -50%) scale(0.9);
 }
-
-.result__box .icon {
-    font-size: 100px;
-    color: #007bff;
-    margin-bottom: 10px;
-}
-
