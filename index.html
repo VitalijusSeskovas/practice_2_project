@@ -7,107 +7,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="assets/css/style.css" rel="stylesheet">
     <script defer src="assets/js/script.js"></script>
+    <script src="assets/js/questions.js"></script>
     <title>Yoga Quiz Application</title>
-    <!-- FontAwsome link for icons -->
+    <!-- Font Awsome link for icons -->
     <script src="https://kit.fontawesome.com/3b1360d435.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<img class="hero" src="assets/images/background.jpg" alt="heroImage">
+<!-- <img class="hero" src="assets/images/background.jpg" alt="heroImage"> -->
 
-<!-- Start quiz button -->
-<div class="startBtn"><button>Start Quiz</button></div>
-
-<!-- Info box -->
-<div class="infoBox">
-    <div class="infoTitle">
-        <h2><span>
-          To more interesting here some rules of this quiz!
-        </span></h2>
+<div class="container">
+    <div id="question-container" class="hide">
+        <div id="question">Question</div>
+        <div id="answer-buttons" class="btn-grid">
+            <button class="btn">Answer1</button>
+            <button class="btn">Answer2</button>
+            <button class="btn">Answer3</button>
+            <button class="btn">Answer4</button>
+        </div>
     </div>
-    <div class="infoList">
-        <div class="info">1. You will have only <span style="color:#ff0800">15 seconds</span> per each quastion to select
-            your answear.</div>
-        <div class="info">2. You have only one chance to pick your answear.</div>
-        <div class="info">3. You can't select you option once time goes off.</div>
-        <div class="info">4. You can't exit the Quiz while you're playing.</div><div class="info">5. You'll get points on the of your correct answer.</div>
-        <br>
-        <div class="icon"><i class="fa-solid fa-face-smile"></i></div>
+    <div class="controls">
+        <button id="start-btn" class="start-btn btn">Start Quiz</button>
+        <button id="next-btn" class="next-btn btn hide">Next</button>
+    </div>
+</div>
+    <!-- Start quiz section -->
+<!-- Guide box -->
+<!--<div id="guide">
+        <h2>To make more interesting here some rules for this quiz!</h2>
+       <h4>1. You will have only <span style="color:#ff0800">15 seconds</span> per each question to select
+            your answer.</h4>
+    <h4>2. You have only one chance to pick your answer.</h4>
+    <h4>3. You can't select you option once time goes off.</h4>
+    <h4>4. You can't exit the Quiz while you're playing.</h4>
+    <h4>5. You'll get points on the of your correct answer.</h4>
+    <div class="button">
+        <button id="exit">Exit</button>
+        <button id="continue">Continue</button>
+    </div>
+    <div class="icon"><i class="fa-solid fa-face-smile"></i></div>
         <div class="info">
             <h3>Good Luck!</h3>
         </div>
-    </div>
-
-    <!-- Control buttons -->
-    <div class="buttons">
-        <button class="quit">Exit Quiz</button>
-        <button class="restart">Continue</button>
-    </div>
-</div>
-
-<!-- Quiz box -->
-<div class="quizBox">
-    <header>
-        <div class="title">
-            <h1>Welcome to of Yoga Quiz!</h1>
-        </div>
-        <div class="icon"><i class="fa-solid fa-hands-praying"></i></div>
-        <div class="timer">
-            <div class="timerText">Time left</div>
-            <div class="timerSec">15</div>
-        </div>
-    </header>
-    <section>
-        <div class="queText">
-            <h2>What is a female who practices yoga called?</h2>
-        </div>
-        <div class="optionList">
-            <div class="option">
-                <span>Yogini</span>
-                <div class="icon tick"><i class="fas fa-check"></i></div>
-            </div>
-            <div class="option">
-                <span>Yogi</span>
-                <div class="icon cross"><i class="fas fa-times"></i></div>
-            </div>
-            <div class="option">
-                <span>Suta</span>
-            </div>
-            <div class="option">
-                <span>Buddhist</span>
-            </div>
-        </div>
-    </section>
-    <!-- Quiz box footer -->
-    <footer>
-        <div class="totalQue">
-            <div class="scores">
-                <p>4</p>of<p>5</p>Questions
-            </div>
-        </div>
-        <button class="nextBtn">Next Que</button>
-    </footer>
-</div>
-
-<!-- Results box -->
-<div class="resultBox">
-    <div class="icon">
-        <i class="fa-solid fa-face-smile-beam"></i>
-    </div>
-    <div class="completeText">
-        <h3>You've completed the Quiz!</h3>
-    </div>
-    <div class="scoreText">
-        <h3>Well done</h3>, You got <p>4</p> out of <p>5</p>
-    </div>
-    <div class="buttons">
-        <button class="restart">Replay Quiz</button>
-        <button class="quit">Quit Quiz</button>
-    </div>
-</div>
-
-<script src="assets/js/questions.js"></script>
-<script src="assets/js/script.js"></script>
+</div> -->
+        
+    <!-- Quiz section -->
 </body>
 
 </html>
