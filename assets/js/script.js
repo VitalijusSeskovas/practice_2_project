@@ -1,8 +1,8 @@
-const startButton = document.getElementById('start-btn');
-const nextButton = document.getElementById('next-btn');
-const questionContainerElement = document.getElementById('question-container');
-const questionElement = document.getElementById('question');
-const answerButtonsElement = document.getElementById('answer-buttons');
+let startButton = document.getElementById('start-btn');
+let nextButton = document.getElementById('next-btn');
+let questionContainerElement = document.getElementById('question-container');
+let questionElement = document.getElementById('question');
+let answerButtonsElement = document.getElementById('answer-buttons');
 
 let shuffleQuestions, currentquestionIndex;
 
@@ -28,7 +28,7 @@ function setNextQuestion() {
 function showQuestion(question) {
     questionElement.innerText = question.question;
     question.answers.forEach(answer => {
-        const button = document.createElement('button');
+        let button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('btn');
         if (answer.correct) {
@@ -49,8 +49,8 @@ function resetState() {
 }
 
 function selectAnswer(e) {
-  const selectedButton = e.target;
-  const correct = selectedButton.dataset.correct;
+  let selectedButton = e.target;
+  let correct = selectedButton.dataset.correct;
   setStatusClass(document.body, correct);
   Array.from(answerButtonsElement.children).forEach(button => {
      setStatusClass(button, button.dataset.correct);
@@ -77,50 +77,95 @@ function clearStatusClass(element) {
     element.classList.remove('wrong');
 }
 
-const questions = [
+let questions = [
     {
         question: 'What is a female who practices yoga called????',
         answers: [
-          { text: 'Sutra', correct: false },
-          { text: 'Yogi', correct: false },
-          { text:'Yogini', correct: true },
-          { text: 'Buddhist', correct: false }
+          { text: 'A. Sutra', correct: false },
+          { text: 'B. Yogi', correct: false },
+          { text:'C. Yogini', correct: true },
+          { text: 'D. Buddhist', correct: false }
         ]
     },
     {
         question: "What is traditionally chanted at the beginning and end of a yoga session?",
         answers: [
-            { text: 'Hatha', correct: false },
-          { text: 'Om', correct: true },
-          { text:'Asana', correct: false },
-          { text: 'Samadhi', correct: false }
+            { text: 'A. Hatha', correct: false },
+          { text: 'B. Om', correct: true },
+          { text:'C. Asana', correct: false },
+          { text: 'D. Samadhi', correct: false }
         ]
     },
     {
         question: "Where did yoga originate?",
         answers: [
-            { text: 'China', correct: false },
-            { text: 'Thailand', correct: false },
-            { text:'Nepal', correct: false },
-            { text: 'India', correct: true }
+            { text: 'A. Bharta', correct: false },
+            { text: 'B. Thailand', correct: false },
+            { text:'C. Nepal', correct: false },
+            { text: 'D. India', correct: true }
           ]
     },
     {
         question: "What does the word yoga mean?",
         answers: [
-            { text: 'Union', correct: true },
-            { text: 'Peace', correct: false },
-            { text:'Relaxation', correct: false },
-            { text: 'Soul', correct: false }
+            { text: 'A. Union', correct: true },
+            { text: 'B. Peace', correct: false },
+            { text:'C. Relaxation', correct: false },
+            { text: 'D. Soul', correct: false }
           ]
     },
     {
         question: "In what yoga position do you stand, place a hand on the floor and stretch your arms?",
         answers: [
-            { text: 'Cat', correct: false },
-            { text: 'Warrior', correct: false },
-            { text:'Triangle', correct: true },
-            { text: 'Cobra', correct: false }
+            { text: 'A. Cat', correct: false },
+            { text: 'B. Warrior', correct: false },
+            { text:'C. Triangle', correct: true },
+            { text: 'D. Cobra', correct: false }
+          ]
+    },
+    {
+        question: "What Yogic method did Indra Devi advocate above all other techniques?",
+        answers: [
+            { text: 'A. Plough Pose', correct: false },
+            { text: 'B. Vegan Diet', correct: false },
+            { text:'C. Headstand', correct: false },
+            { text: 'D. Deep Rhythmic Breathing', correct: true }
+          ]
+    },
+    {
+        question: "What teacher inspired the creation of the Sivananda Yoga Vedanta Centers?",
+        answers: [
+            { text: 'A. Swami Vishnu-devanada', correct: false },
+            { text: 'B. Swami Sivananda', correct: true },
+            { text:'C. Swami Krishnananda', correct: false },
+            { text: 'D. Swami Vivekanada', correct: false }
+          ]
+    },
+    {
+        question: "What is the name for the yoga of meditation?",
+        answers: [
+            { text: 'A. Jnana Yoga', correct: false },
+            { text: 'B. Bhakti Yoga', correct: false },
+            { text:'C. Raja Yoga', correct: true },
+            { text: 'D. Karma Yoga', correct: false }
+          ]
+    },
+    {
+        question: "What does Raja Yoga advocate?",
+        answers: [
+            { text: 'A.Mental And Physical Control ', correct: true },
+            { text: 'B. Purity Of Heart', correct: false },
+            { text:'C. Divine Love', correct: false },
+            { text: 'D. Knowledge', correct: false }
+          ]
+    },
+    {
+        question: "What is the name for a sequence of yoga positions?",
+        answers: [
+            { text: 'A. Tadasana', correct: false },
+            { text: 'B. Poses', correct: false },
+            { text:'C. Bhujangasana', correct: false },
+            { text: 'D. Vinyasa', correct: true }
           ]
     },
 ];

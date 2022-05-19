@@ -21,7 +21,7 @@ body {
     margin: 2% auto;
     width: 550px;
     height: 400px;
-    font: #fff;
+    /*font: #fff;*/
     border-radius: 6px;
     box-shadow: 0 0 10px 3px;
     background: url('../images/background4.jpg') no-repeat center center;
