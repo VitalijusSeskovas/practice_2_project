@@ -1,6 +1,7 @@
+// Creating all required elements for reacting buttons, Welcome and Question sections
 let startButton = document.getElementById('start-btn');
 let nextButton = document.getElementById('next-btn');
-let questionContainerElement = document.getElementById('question-container');
+let questionBoxElement = document.getElementById('question-box');
 let questionElement = document.getElementById('question');
 let answerButtonsElement = document.getElementById('answer-buttons');
 
@@ -9,17 +10,24 @@ let shuffleQuestions, currentquestionIndex;
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
     currentquestionIndex++;
-    setNextQuestion()
-})
+    setNextQuestion();
+});
 
+/*
+The code below will hide
+Start Button and will make
+questions apear not in
+order but random 'shuffleQuestions':
+*/
 function startGame () {
     startButton.classList.add('hide');
     shuffleQuestions = questions.sort(() => Math.random() - .5);
     currentquestionIndex = 0;
-    questionContainerElement.classList.remove('hide');
+    questionBoxElement.classList.remove('hide');
     setNextQuestion();
 }
 
+// When Next 
 function setNextQuestion() {
     resetState();
     showQuestion(shuffleQuestions[currentquestionIndex]);
@@ -28,7 +36,7 @@ function setNextQuestion() {
 function showQuestion(question) {
     questionElement.innerText = question.question;
     question.answers.forEach(answer => {
-        let button = document.createElement('button');
+        const button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('btn');
         if (answer.correct) {
@@ -49,8 +57,8 @@ function resetState() {
 }
 
 function selectAnswer(e) {
-  let selectedButton = e.target;
-  let correct = selectedButton.dataset.correct;
+  const selectedButton = e.target;
+  const correct = selectedButton.dataset.correct;
   setStatusClass(document.body, correct);
   Array.from(answerButtonsElement.children).forEach(button => {
      setStatusClass(button, button.dataset.correct);
@@ -59,7 +67,7 @@ function selectAnswer(e) {
       nextButton.classList.remove('hide');
   } else {
       startButton.innerText = 'Restart';
-      startButton.classList.remove('hide')
+      startButton.classList.remove('hide');
   }
 }
 
@@ -153,7 +161,7 @@ let questions = [
     {
         question: "What does Raja Yoga advocate?",
         answers: [
-            { text: 'A.Mental And Physical Control ', correct: true },
+            { text: 'A. Mental And Physical Control ', correct: true },
             { text: 'B. Purity Of Heart', correct: false },
             { text:'C. Divine Love', correct: false },
             { text: 'D. Knowledge', correct: false }

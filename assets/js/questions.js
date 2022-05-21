@@ -102,4 +102,3 @@ let quastions = [
           ]
     },
 ];
-];
