@@ -8,7 +8,7 @@ Quiz will start once user will click on Start button displayed in middle of the 
 
 Visit the deployed site: [Yoga Quiz Application]()
 
-[Screenshot of the website on several screen sizes]()
+[Screenshot of the website on several screen sizes](assets/images/ResponsiveScreenshoot.jpg)
 
 ## User Experience
 - I want to know more about Yoga and if there is interactive applications I would be interested to try.
@@ -68,7 +68,6 @@ Visit the deployed site: [Yoga Quiz Application]()
 
 - For this application I've used most of the colours from hero image using developer tools. To make sure user not overwhelmed with lots of diffent colours or images I keep colours scheme soft and minimalistic.
 
-- 
 
 - I have used #000000, #fff and #1B0735 as the primary colour for the content text, for border bottoms and buttons.
 
@@ -87,14 +86,29 @@ Visit the deployed site: [Yoga Quiz Application]()
  I have used Google Fonts to import font for the site text content. I've choose Macondo 
 [Macondo](https://fonts.google.com/specimen/Macondo?query=Macondo#type-tester) font style because it's reminded me Hindu or Sanskrit tradititional writing style.
 
-[Welcome To Yoga Quiz font style exemple screenshot](assets/images/welcomeSection.jpg)
+[Hero image screenshoot](assets/images/heroImage.jpg)
 
 ### Hero Image and Background
 
-Hero images was used from [pixabay] website (https://pixabay.com/images). This Quiz orientated to Yoga lovers so for "Hero" images and welcome section I hade use image with person who's maditate in beautifull  mountains with sunset/ sunrise relaxing background. 
+Hero images was used from [pixabay] website (https://pixabay.com/images). This Quiz orientated to Yoga lovers so for "Hero" images and welcome section I hade use image with person who's maditate in beautifull  mountains with sunset/ sunrise relaxing background. Smile face icon add to "Hero image" make more friendly look.
 According by Yoga that what yoga maditators do that maditate before sun rise or sunset.
 
------------------------
-- As background I've used picture meditation in mountains to create Theme of Yoga and calming/relaxing atmosphere. Smile face icon add to "Hero image" make more friendly look.
+[Welcome To Yoga Quiz font style exemple screenshot](assets/images/welcomeSection.jpg)
 
-[Hero image screenshoot](assets/images/heroImage.jpg)
+## Technologies
+* HTML5
+* CSS3
+* JavaScript
+* Balsamiq
+* Google Fonts
+* Gitpod 
+* GitHub
+
+## Testing
+- Website was tested several times for HTML style sheets [W3C Markup Validation Service](https://validator.w3.org/).
+
+[Nu Html Checker result index page screenshot](assets/images/HTMLvalidator.jpg)
+
+- For CSS style sheets [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator.html.en) using these validators.
+
+[Nu Html Checker result index page screenshot](assets/images/cssValidator.jpg)

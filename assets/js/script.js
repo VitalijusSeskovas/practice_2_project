@@ -5,8 +5,9 @@ let questionBoxElement = document.getElementById('question-box');
 let questionElement = document.getElementById('question');
 let answerButtonsElement = document.getElementById('answer-buttons');
 
+// Element for making quastions and answers apear random
 let shuffleQuestions, currentquestionIndex;
-
+// When Start Button click
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
     currentquestionIndex++;
@@ -27,12 +28,13 @@ function startGame () {
     setNextQuestion();
 }
 
-// When Next 
+// When Next Button click
 function setNextQuestion() {
     resetState();
     showQuestion(shuffleQuestions[currentquestionIndex]);
 }
 
+// After Next Buutn click will show next quastions and answear options
 function showQuestion(question) {
     questionElement.innerText = question.question;
     question.answers.forEach(answer => {
@@ -46,7 +48,7 @@ function showQuestion(question) {
         answerButtonsElement.appendChild(button);
     });
 }
-
+// When Next Button will click reset
 function resetState() {
     clearStatusClass(document.body);
     nextButton.classList.add('hide');
@@ -56,6 +58,7 @@ function resetState() {
 
 }
 
+// When user selet the answer
 function selectAnswer(e) {
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
@@ -70,7 +73,7 @@ function selectAnswer(e) {
       startButton.classList.remove('hide');
   }
 }
-
+// When user will select option will apear Correct or Wrong answers
 function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
@@ -80,11 +83,13 @@ function setStatusClass(element, correct) {
     }
 }
 
+// Wnen Next Button will click will restet answer buttons
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
 }
 
+// Quastions and Answers
 let questions = [
     {
         question: 'What is a female who practices yoga called????',
