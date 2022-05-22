@@ -1,5 +1,5 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Poppins:ital,wght@1,200&display=swap');
+/* Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
 
 /* Targeting buttons colors for right and wrong answers */
 :root {
@@ -35,21 +35,20 @@ h1 {
     border-bottom: 2px solid #000000;
 }
 h2 {
+    margin: 1%;
     float: left;
     color: #000000;
 }
 
 p {
+    margin: 1%;
     line-height: 40px;
     color: #000000;
     font-size: 20px;
 }
 /* Smile face icon styling*/
-.icon {
-    text-align: center;
-    color: aliceblue;
-    margin: 4% auto;
-    padding: 1% 60%;
+icon {
+    color: #a1d3ff;
     font-size: 18px;
 }
 /* Quastion section styling */
@@ -123,10 +122,22 @@ p {
 .hide {
     display: none;
 }
-/* Media queries for screen sizes max width 540 */
-/*@media (max-width: 550px) {
+ /* Media queries for screen sizes max width 540px */
+@media (max-width: 550px) {
   .info-box {
-    font-size: 1em;
-    align-items: flex-start;
+    width: 100%;
     } 
-}*/
+    p {
+        margin: 1%;
+    }
+    h2 {
+        font-size: 100%;
+    }
+}
+/* Media queries for screen sizes max width 495px */
+@media (max-width: 495px) {
+    p {
+
+        line-height: 22px;
+    }
+}
